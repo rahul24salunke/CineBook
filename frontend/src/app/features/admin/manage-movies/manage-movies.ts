@@ -5,6 +5,7 @@ import { DomSanitizer, SafeResourceUrl } from "@angular/platform-browser";
 import {
   LucideChevronLeft,
   LucideChevronRight,
+  LucideCirclePlay,
   LucideClapperboard,
   LucideClock,
   LucideFilm,
@@ -53,6 +54,7 @@ const SLIDE_INTERVAL_MS = 4000;
     CurrencyPipe,
     LucideChevronLeft,
     LucideChevronRight,
+    LucideCirclePlay,
     LucideClapperboard,
     LucideClock,
     LucideFilm,
@@ -221,7 +223,7 @@ export class ManageMoviesComponent implements OnInit, OnDestroy {
       languages: this.form.languages.trim(),
       posterUrl: this.form.posterUrl.trim(),
       trailerUrl: this.form.trailerUrl.trim(),
-      price: this.form.price!
+      price: this.form.price ?? 0
     };
 
     this.error.set(null);
